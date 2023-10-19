@@ -7,13 +7,15 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "start:win": "cross-env ENV_PATH=./.env.production NODE_ENV=production npm start"
   },
-  "devDependencies": {},
   "dependencies": {
-    "@strapi/strapi": "4.14.4",
-    "@strapi/plugin-users-permissions": "4.14.4",
     "@strapi/plugin-i18n": "4.14.4",
+    "@strapi/plugin-users-permissions": "4.14.4",
+    "@strapi/strapi": "4.14.4",
+    "cross-env": "^7.0.3",
+    "node-postgres": "^0.6.2",
     "pg": "8.8.0"
   },
   "author": {
@@ -23,7 +25,7 @@
     "uuid": "445ffd54-6386-4931-a2a7-6854a988ba35"
   },
   "engines": {
-    "node": ">=16.0.0 <=20.x.x",
+    "node": "16.14.2",
     "npm": ">=6.0.0"
   },
   "license": "MIT"
